@@ -1,0 +1,148 @@
+.SingleHead{
+    position: relative;
+    background-color:#1c96e3;
+    height:50px;
+    width:750px;
+    &:after{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 16px solid #1c96e3;
+        left: 40px;
+        top: 50px;  
+        z-index:999; 
+    }
+    #TopBarTitel{
+        margin-top:-25px;
+        height:50px;
+        width:100%;
+        background-color:$MainBlue;
+        div{
+        margin-left:5px;
+        padding-top:10px;
+        }
+    }
+}
+.SingleContent{
+    background-image: url(imgs/bg.png);
+    background-color:#373737;    
+    width:750px;
+    height:auto;
+    margin-top:-16px; 
+    color:#c1c1c1;
+    a:link{
+        text-decoration:none;
+        font-weight:bold;
+        color:$MainBlue;
+    }
+    a:visited{
+        text-decoration:none;
+        font-weight:bold;
+        color:$MainBlue;
+    }
+    a:active{
+        text-decoration:none;
+        font-weight:bold;
+        color:$MainBlue;
+    }
+    a:focus{
+        text-decoration:none;
+        font-weight:bold;
+        color:$MainBlue;
+    }
+    #main{
+        padding-top:22px;
+        padding-bottom:1px;
+        padding-left:5px;
+        padding-right:5px;
+        margin-bottom:10px;
+        position:relative;
+        img{
+            border:solid 5px $MainBlue
+        }
+        .postcont{
+            font-family:Arial;
+        }
+    }
+}
+
+.TopBar{
+    position: relative;
+    background-color:#1c96e3;
+    height:50px;
+    width:750px;
+    .dreieck{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 16px solid #1c96e3;
+        left: 40px;
+        margin-top: 50px;   
+    }
+}
+.sitecontent{
+    background-color:#373737;    
+    width:750px;
+    min-height:400px;
+    overflow:hidden;
+}
+
+.singlePost{
+    position: relative;
+    top:-11px;
+    &-titelBar{
+        background-color:#1c96e3;
+        height:50px;
+        width:750px;
+        h1{
+            color:white;
+            margin: 0;
+            position: relative;
+            top: 6px;
+            left: 30px;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 16px solid #1c96e3;
+            left: 40px;
+            top:50px;
+        }        
+    }
+    &-content{
+        min-height: 300px;       
+        width:750px;
+        background-color: $TextBackground;
+        p{
+            margin: 0;
+            color: white;
+            padding-left: 45px;
+            padding-right: 10px;
+            padding-bottom: 5px;
+        }
+        h1, h2, h3, h4, h5, h6{
+            color:white;
+            padding-left: 45px;
+        }
+        a{
+            color:white;
+            
+        }
+        &--topPadding{
+            padding-top: 20px;
+        }
+        &--bottomPadding{
+            padding-bottom: 10px;
+        }
+    }
+}

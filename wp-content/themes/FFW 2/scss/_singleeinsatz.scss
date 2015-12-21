@@ -1,0 +1,182 @@
+.einsatz{
+    .Arial{
+        font-family:Arial;
+        padding:5px;
+        margin-top:-20px;
+    }
+
+    .wrapper{
+        height: auto;
+        width: 100%;        
+    }
+    .einsatzInfo{
+        color:white;
+    }
+    .einsatzInfo, .einsatzFahrzeuge, .einsatzBericht{
+        width: 750px;
+        height: auto;
+        background-color: #17689B;
+        overflow: hidden;
+        position:relative;
+        .roundBox{
+            height:80px;
+            width:80px;
+            border-radius:80px;
+            box-shadow: 0px 0px 0px 6px rgba(110, 187, 236, 0.4);
+            position: relative;
+            top: 37px;
+            left: 73px;
+            overflow:hidden;
+            img{
+                height: 120px;
+                margin-left: -15px;
+                margin-top: -10px;
+            }            
+        }
+        .smallRoundBox{
+            height: 50px;
+            width: 50px;
+            border-radius: 80px;
+            box-shadow: 0px 0px 0px 6px rgba(110, 187, 236, 0.4);
+            position: relative;
+            top: -13px;
+            left: 193px;
+            overflow: hidden;
+            float: left;
+            margin-right: 20px;
+        }
+        .entry{
+            margin-left: 190px;
+            font-family: Arial;
+            padding-bottom:15px;
+            .headLine{
+                text-transform: uppercase;
+                font-size: 21px;
+                font-weight: bold;
+                color: #FFF;
+            }
+            .subLine{
+                margin-left:15px;
+            }
+        }
+    }
+    .einsatzFahrzeuge{
+        background-color:#fff;
+        color: rgba(102, 97, 97, 1);
+        &:after {
+            content: "";
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 16px solid #17689B;
+            left: 40px;
+            top: 0px;
+            z-index: 999;
+        }
+        .entry{
+            font-family: Arial;
+            padding-bottom: 15px;
+            top: 0px;
+            .headLine{
+                text-transform: uppercase;
+                font-size: 21px;
+                font-weight: bold;
+                color: #17689B;
+            }
+            div.subLine{
+                margin-left:15px;
+            }
+        }
+    }
+    .einsatzBericht{
+        background-color: #1C96E3;
+        .report{
+            margin-left: 170px;
+            margin-top: -20px;
+            padding: 20px;
+            color:white;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 16px solid #fff;
+            left: 40px;
+            top: 0px;
+            z-index: 999;
+        }
+    }
+    .einsatzBilder{
+        width: 750px;
+        img{
+            margin-bottom: -6px;
+            border:solid 0px!important;
+        }
+        #slides{
+        text-align: center;
+        height: 424px;
+        width: 750px;
+        margin-bottom:-3px;
+            .slidesjs-navigation{
+                position: relative;
+                top: -340px;
+                z-index: 999;
+            }
+            .slidesjs-previous {
+                background: url(../imgs/previous.png) repeat scroll 0% 0% transparent;
+                display: block;
+                width: 94px;
+                height: 128px;
+                position: relative;
+                margin-top: 50px;
+            }
+            .slidesjs-next {
+                background: url(../imgs/previous.png) repeat scroll 0% 0% transparent;
+                display: block;
+                float:right;
+                width: 94px;
+                height: 128px;
+                position: relative;
+                margin-top: -130px;
+                transform:rotate(180deg);
+            }
+            .slidesjs-pagination{                
+                padding:0px;
+                margin:0px;
+                list-style: none;
+                padding: 0px;
+                margin: 0px auto;
+                width: auto;
+                display: inline-block;
+                position: relative;
+                top: -230px;
+                margin-bottom: -20px;
+                .slidesjs-pagination-item{
+                    float:left;
+                    padding:5px;
+                    a{
+                        height: 20px;
+                        position: relative;
+                        content: "a";
+                        z-index: 2147483647;
+                        background-color: #1c96e3;
+                        width: 20px;
+                        display: block;
+                        border-radius: 50px;      
+                        box-shadow:0 0 4px 1px #837A7A;            
+                    }
+                    .active{
+                        display:block;
+                        background-color: #43B0F5;
+                    }
+                }
+
+            }
+        }
+    }
+}

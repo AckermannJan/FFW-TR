@@ -1,0 +1,189 @@
+@mixin TitelFont($size, $bold){
+    font-family: Arial;
+    color: #e8e8e8;
+    font-size: $size;
+    @if $bold    { font-weight:bold; }
+}
+@font-face {
+    font-family: 'weather';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+$MainBlue: #1c96e3;
+$TextBackground: #373737;
+.sideBar{
+    margin-bottom:20px;
+    position: relative;
+    top: -7px;
+    &-titel{
+        height:50px;
+        width:100%;
+        background-color:$MainBlue;
+        text-align:center;
+        line-height: 50px;
+        @include TitelFont(25px, true);
+        h3{
+            margin-top: 5px;
+        }
+    }
+    &-content{
+        background-image: url(imgs/bg.png);
+        background-color:$TextBackground;
+        min-height:100px;
+        width:100%;
+        font-family: Arial;
+        color: #E8E8E8;
+        font-size: 13px;
+        p{
+            padding-top:15px;
+            margin-left: 15px;
+            margin-top: 0px;
+        }
+        a:link{
+            text-decoration:none;
+            font-weight:bold;
+            color:#E8E8E8;
+        }
+        a:visited{
+            text-decoration:none;
+            font-weight:bold;
+            color:#E8E8E8;
+        }
+        a:active{
+            text-decoration:none;
+            font-weight:bold;
+            color:#E8E8E8;
+        }
+        a:focus{
+            text-decoration:none;
+            font-weight:bold;
+            color:#E8E8E8;
+        }
+        &--imgBanner{
+            padding-top:0px;
+            margin-left: 0px;
+            margin-bottom: -3px;
+            width: 280px;
+        }
+        #weather {
+            width: 270px;
+            margin: 0px auto;
+            text-align: center;
+            text-transform: uppercase;
+            padding-top: 10px;
+            img{
+                float: left;
+            }
+            font-size:18px;
+            text-align:left;
+        }
+        i {
+            color: #fff;
+            font-family: weather;
+            font-size: 210px;
+            font-weight: normal;
+            font-style: normal;
+            line-height: 0;
+            position: relative;
+            top: 50px;
+        }
+        .icon-0:before { content: ":"; }
+        .icon-1:before { content: "p"; }
+        .icon-2:before { content: "S"; }
+        .icon-3:before { content: "Q"; }
+        .icon-4:before { content: "S"; }
+        .icon-5:before { content: "W"; }
+        .icon-6:before { content: "W"; }
+        .icon-7:before { content: "W"; }
+        .icon-8:before { content: "W"; }
+        .icon-9:before { content: "I"; }
+        .icon-10:before { content: "W"; }
+        .icon-11:before { content: "I"; }
+        .icon-12:before { content: "I"; }
+        .icon-13:before { content: "I"; }
+        .icon-14:before { content: "I"; }
+        .icon-15:before { content: "W"; }
+        .icon-16:before { content: "I"; }
+        .icon-17:before { content: "W"; }
+        .icon-18:before { content: "U"; }
+        .icon-19:before { content: "Z"; }
+        .icon-20:before { content: "Z"; }
+        .icon-21:before { content: "Z"; }
+        .icon-22:before { content: "Z"; }
+        .icon-23:before { content: "Z"; }
+        .icon-24:before { content: "E"; }
+        .icon-25:before { content: "E"; }
+        .icon-26:before { content: "3"; }
+        .icon-27:before { content: "a"; }
+        .icon-28:before { content: "A"; }
+        .icon-29:before { content: "a"; }
+        .icon-30:before { content: "A"; }
+        .icon-31:before { content: "6"; }
+        .icon-32:before { content: "1"; }
+        .icon-33:before { content: "6"; }
+        .icon-34:before { content: "1"; }
+        .icon-35:before { content: "W"; }
+        .icon-36:before { content: "1"; }
+        .icon-37:before { content: "S"; }
+        .icon-38:before { content: "S"; }
+        .icon-39:before { content: "S"; }
+        .icon-40:before { content: "M"; }
+        .icon-41:before { content: "W"; }
+        .icon-42:before { content: "I"; }
+        .icon-43:before { content: "W"; }
+        .icon-44:before { content: "a"; }
+        .icon-45:before { content: "S"; }
+        .icon-46:before { content: "U"; }
+        .icon-47:before { content: "S"; }
+
+        .leftWrapper{
+            float:left;
+        }
+
+        .img{
+            width:135px;
+            height:128px;
+            float:right;
+            position: relative;
+            left: -30px;
+        }
+
+        .wind, .temp, .sun{
+            width:112px;
+            height:36px;
+            margin-bottom:10px;          
+        }
+        .temp p, .sun p{
+            padding-top: 10px;
+            margin-left:50px;
+        }
+        .wind p{            
+            padding:0px;
+            margin:0px;
+            padding-left:50px;
+        }
+    }
+    &-unwetter{
+        height: 50px;
+        width: 100%;
+        background: #008000 url("imgs/flash31.png") no-repeat scroll 2% 44% / 32px 32px;
+        background-color: green;
+        position: relative;
+        top: 137px;
+        p{
+            height: 30px;
+            position: absolute;
+            padding: 0px;
+            margin: 0px;
+            font-size: 23px;
+            left: 40px;
+            top: 10px;
+        }
+    }
+}
+    

@@ -1,0 +1,186 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22.08.2015, 13:32:27
+    Author     : Jan Ackermann
+*/
+@media only screen and (min-width: 1050px) {
+    .fullscreen{
+        display:block;
+    }
+    .mobile{
+        display:none;
+    } 
+}
+@media only screen and (max-width: 1050px) {
+    header{
+        width: 100% !important;        
+    }
+    .stage{
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    body .wrapper{
+        width: 100%;
+    }
+    body{
+        
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .fullscreen{
+        display:none;
+    }
+    .mobile{
+        display:block;
+    }
+    .mainNav{
+        width: 100%;
+        &-header{
+            &--item{
+                li{
+                    display:block;
+                }
+            }
+        }
+    }    
+    .mainFlex {
+        width: 100%;
+        border-spacing: 0;
+        margin-top: 10px;
+        margin-left: 0;
+        &-left{
+            display:none;
+        }
+        &-right{
+            width: 100%
+        }
+    }
+    .singlePost{
+        &-titelBar{
+            width:100%;
+        }
+        &-content{
+            width: 100%;
+        }
+    }
+    .postBox{
+        width:100%;
+        height:auto;
+        &-img{
+            width: 100%;
+            display:none;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            &:after{
+                width:100%;
+                height: 10px;
+                left: calc(50% - 10px);
+            }            
+        }
+        &-content{
+            width: calc(100% - 30px);
+            height:auto;
+            padding-bottom: 50px;
+            padding-right: 0;
+            &:after{
+                content: "";
+                width: 100%;
+                height: 10px;
+                background-color: #1C96E3;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+            &:before{
+                left: 35px;
+                transform: rotate(90deg);
+                top: 8px;
+            }
+        }
+    }
+    #footer{
+        margin-left: -20px;
+        padding-left: 30px;
+        width: calc(100% + 10px);
+        margin-top: 20px;
+        p{
+            display:none;
+        }
+        a{
+            display:none;
+        }
+        #smalltitel{
+            display:block;
+        }
+        #bigtitel{
+            display:block;
+            a{
+               display:block; 
+            }
+        }        
+        #row1, #row2, #row3{
+           width: 33% !important;
+           min-width: 270px !important;
+           margin:0 !important;
+           height: 70px !important;
+        }
+        #FooterContent{
+            padding: 0;
+        }
+    }
+    .singlePost{
+        top:0;
+    }
+    .einsatz{
+        position: relative;
+        top: -20px;
+    }
+    .einsatz .einsatzInfo, .einsatz .einsatzFahrzeuge, .einsatz .einsatzBericht{
+        width: 100%;
+    }
+    #slides{
+        display:none !important;
+        
+    }
+}
+@media only screen and (max-width: 470px) {
+    
+    .einsatz .einsatzInfo .roundBox, .einsatz .einsatzFahrzeuge .roundBox, .einsatz .einsatzBericht .roundBox {
+        left: 15px;
+    }
+    .einsatz .einsatzInfo .entry, .einsatz .einsatzFahrzeuge .entry, .einsatz .einsatzBericht .entry {
+        margin-left: 100px;
+    }
+    .einsatz .einsatzInfo .smallRoundBox, .einsatz .einsatzFahrzeuge .smallRoundBox, .einsatz .einsatzBericht .smallRoundBox {
+        left: 113px;
+    }
+    .einsatz .einsatzBericht .report {
+        margin-left: 90px;
+    }
+}
+@media only screen and (max-width: 430px) {
+    .einsatz .einsatzInfo .roundBox, .einsatz .einsatzFahrzeuge .roundBox, .einsatz .einsatzBericht .roundBox {
+        margin-bottom: 50px;
+    }
+    .einsatz .einsatzInfo .entry, .einsatz .einsatzFahrzeuge .entry, .einsatz .einsatzBericht .entry {
+        margin-left: 15px;
+    }
+    .einsatz .einsatzBericht .report {
+        margin-left: -5px;
+    }
+    .einsatz .einsatzInfo .smallRoundBox, .einsatz .einsatzFahrzeuge .smallRoundBox, .einsatz .einsatzBericht .smallRoundBox {
+        top: 7px;
+        left: 15px;
+    }
+    .singlePost-titelBar h1{
+        margin: 0px 0px 0px 10px;
+    }
+}

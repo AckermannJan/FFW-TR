@@ -1,0 +1,81 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22.08.2015, 13:04:28
+    Author     : Jan Ackermann
+*/
+
+.imgGalerie{
+        width: 100%;
+        img{
+            margin-bottom: -6px;
+            border:solid 0px!important;
+        }
+        #slides{
+        text-align: center;
+        height: 424px;
+        width: 750px;
+        margin-bottom:-3px;
+            img{
+                width: 100%;
+            }
+            .slidesjs-navigation{
+                position: relative;
+                top: -340px;
+                z-index: 999;
+            }
+            .slidesjs-previous {
+                background: url(imgs/previous.png) repeat scroll 0% 0% transparent;
+                display: block;
+                width: 94px;
+                height: 128px;
+                position: relative;
+                margin-top: 50px;
+            }
+            .slidesjs-next {
+                background: url(imgs/previous.png) repeat scroll 0% 0% transparent;
+                display: block;
+                float:right;
+                width: 94px;
+                height: 128px;
+                position: relative;
+                margin-top: -130px;
+                transform:rotate(180deg);
+            }
+            .slidesjs-pagination{                
+                padding:0px;
+                margin:0px;
+                list-style: none;
+                padding: 0px;
+                margin: 0px auto;
+                width: auto;
+                display: inline-block;
+                position: relative;
+                top: -230px;
+                margin-bottom: -20px;
+                .slidesjs-pagination-item{
+                    float:left;
+                    padding:5px;
+                    a{
+                        height: 20px;
+                        position: relative;
+                        content: "a";
+                        z-index: 2147483647;
+                        background-color: #1c96e3;
+                        width: 20px;
+                        display: block;
+                        border-radius: 50px;      
+                        box-shadow:0 0 4px 1px #837A7A;            
+                    }
+                    .active{
+                        display:block;
+                        background-color: #43B0F5;
+                    }
+                }
+
+            }
+        }
+    }
