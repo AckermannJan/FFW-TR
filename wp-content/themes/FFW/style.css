@@ -31,6 +31,8 @@ and open the template in the editor.
       color: #FFF; }
       .einsatzTabelle table tr td a {
         text-decoration: none; }
+      .einsatzTabelle table tr td:nth-child(3) {
+        padding-right: 20px; }
 .einsatzTabelle .smallRoundBox {
   height: 30px;
   width: 30px;
@@ -150,7 +152,7 @@ header {
   z-index: 1; }
 
 .mainNav {
-  width: 1050px;
+  width: 1300px;
   position: relative; }
   .mainNav-header {
     width: 100%;
@@ -622,8 +624,7 @@ a:focus{
 .SingleHead {
   position: relative;
   background-color: #1c96e3;
-  height: 50px;
-  width: 750px; }
+  height: 50px; }
   .SingleHead:after {
     content: '';
     position: absolute;
@@ -647,7 +648,6 @@ a:focus{
 .SingleContent {
   background-image: url(imgs/bg.png);
   background-color: #373737;
-  width: 750px;
   height: auto;
   margin-top: -16px;
   color: #c1c1c1; }
@@ -706,8 +706,7 @@ a:focus{
   top: -11px; }
   .singlePost-titelBar {
     background-color: #1c96e3;
-    height: 50px;
-    width: 750px; }
+    height: 50px; }
     .singlePost-titelBar h1 {
       color: white;
       margin: 0;
@@ -726,7 +725,6 @@ a:focus{
       top: 50px; }
   .singlePost-content {
     min-height: 300px;
-    width: 750px;
     background-color: #373737; }
     .singlePost-content p {
       margin: 0;
@@ -756,7 +754,7 @@ a:focus{
 .einsatz .einsatzInfo {
   color: white; }
 .einsatz .einsatzInfo, .einsatz .einsatzFahrzeuge, .einsatz .einsatzBericht {
-  width: 750px;
+  width: 990px;
   height: auto;
   background-color: #17689B;
   overflow: hidden;
@@ -929,6 +927,8 @@ a:focus{
       color: #FFF; }
       .einsatzTabelle table tr td a {
         text-decoration: none; }
+      .einsatzTabelle table tr td:nth-child(3) {
+        padding-right: 20px; }
 .einsatzTabelle .smallRoundBox {
   height: 30px;
   width: 30px;
@@ -1024,19 +1024,19 @@ and open the template in the editor.
     Author     : Jan Ackermann
 */
 .postBox {
-  height: 400px;
-  width: 750px;
+  height: 500px;
+  width: 990px;
   margin-bottom: 20px;
   background-color: #373737;
   color: white;
   position: relative; }
   .postBox-img {
     float: left;
-    width: 500px;
-    height: 400px; }
+    width: 670px;
+    height: 500px; }
     .postBox-img img {
-      width: 500px;
-      height: 400px; }
+      width: 670px;
+      height: 500px; }
     .postBox-img:after {
       content: '';
       height: 100%;
@@ -1044,9 +1044,9 @@ and open the template in the editor.
       background-color: #1c96e3;
       position: absolute;
       top: 0;
-      left: 500px; }
+      left: 670px; }
   .postBox-content {
-    width: 210px;
+    width: 270px;
     height: 85%;
     padding-left: 30px;
     padding-right: 10px;
@@ -1067,7 +1067,7 @@ and open the template in the editor.
       border-style: solid;
       border-width: 7.5px 0px 7.5px 10px;
       border-color: transparent transparent transparent #1C97E3;
-      left: 510px;
+      left: 680px;
       top: 30px; }
 
 /*
@@ -1080,7 +1080,7 @@ and open the template in the editor.
     Author     : Jan Ackermann
 */
 .mainFlex {
-  width: 1090px;
+  width: 1340px;
   height: 500px;
   display: table;
   border-spacing: 20px;
@@ -1090,7 +1090,7 @@ and open the template in the editor.
     display: table-cell; }
   .mainFlex-right {
     display: table-cell;
-    width: 750px; }
+    width: 990px; }
   .mainFlex--smallMargin {
     margin-top: -11px; }
 
@@ -1104,20 +1104,21 @@ and open the template in the editor.
     Author     : Jan Ackermann
 */
 .imgGalerie {
-  width: 100%; }
+  width: 100%;
+  position: relative;
+  z-index: 0; }
   .imgGalerie img {
     margin-bottom: -6px;
     border: solid 0px !important; }
   .imgGalerie #slides {
     text-align: center;
-    height: 424px;
-    width: 750px;
+    width: 100%;
     margin-bottom: -3px; }
     .imgGalerie #slides img {
       width: 100%; }
     .imgGalerie #slides .slidesjs-navigation {
       position: relative;
-      top: -340px;
+      top: -240px;
       z-index: 999; }
     .imgGalerie #slides .slidesjs-previous {
       background: url(imgs/previous.png) repeat scroll 0% 0% transparent;
@@ -1125,7 +1126,7 @@ and open the template in the editor.
       width: 94px;
       height: 128px;
       position: relative;
-      margin-top: 50px; }
+      margin-top: -139px; }
     .imgGalerie #slides .slidesjs-next {
       background: url(imgs/previous.png) repeat scroll 0% 0% transparent;
       display: block;
@@ -1144,7 +1145,7 @@ and open the template in the editor.
       width: auto;
       display: inline-block;
       position: relative;
-      top: -230px;
+      top: -50px;
       margin-bottom: -20px; }
       .imgGalerie #slides .slidesjs-pagination .slidesjs-pagination-item {
         float: left;
@@ -1325,7 +1326,7 @@ and open the template in the editor.
   float: right; }
 
 header {
-  width: 1050px;
+  width: 1300px;
   margin: 0 auto; }
 
 body {
@@ -1339,7 +1340,7 @@ body {
   display: table; }
 
 .wrapper {
-  width: 1050px;
+  width: 1300px;
   margin: 0 auto;
   text-align: left; }
 

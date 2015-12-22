@@ -59,7 +59,7 @@
                                             $day =  date( d, $timestamp  );
                                             $year =  date( Y, $timestamp  );
                                             $minute =  date( i, $timestamp  );
-                                            $hour =  date( g, $timestamp  );
+                                            $hour =  date( H, $timestamp  );
                                             echo $day,".",$month,".",$year," um ", $hour,":",$minute,"Uhr" ; ?></span>
                             </div>
                         </div>

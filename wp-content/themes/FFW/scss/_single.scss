@@ -2,7 +2,6 @@
     position: relative;
     background-color:#1c96e3;
     height:50px;
-    width:750px;
     &:after{
         content: '';
         position: absolute;
@@ -28,8 +27,7 @@
 }
 .SingleContent{
     background-image: url(imgs/bg.png);
-    background-color:#373737;    
-    width:750px;
+    background-color:#373737; 
     height:auto;
     margin-top:-16px; 
     color:#c1c1c1;
@@ -99,7 +97,6 @@
     &-titelBar{
         background-color:#1c96e3;
         height:50px;
-        width:750px;
         h1{
             color:white;
             margin: 0;
@@ -120,8 +117,7 @@
         }        
     }
     &-content{
-        min-height: 300px;       
-        width:750px;
+        min-height: 300px; 
         background-color: $TextBackground;
         p{
             margin: 0;

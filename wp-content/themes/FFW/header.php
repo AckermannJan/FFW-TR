@@ -25,7 +25,7 @@ echo $pageid;
     </head>
     <body>    
         <header>            
-            <div class="stage">
+            <div class="stage" style="width: 1300px;">
                 <img alt="Feuerwehr-Traisa Gerätehaus"src="http://img.webme.com/pic/f/feuer-aua/header-zeichnung-linksbun.jpg" /></a>
             </div>
             <div class="mainNav fullscreen">
@@ -36,6 +36,7 @@ echo $pageid;
                         <li><a id="tab2" href="<?php echo esc_url( home_url( '/?p=59' ) ); ?>">Verein</a></li>
                         <li><a id="tab3" href="<?php echo esc_url( home_url( '/?p=60' ) ); ?>">Kindergruppen</a></li>
                         <li><a id="tab4" href="<?php echo esc_url( home_url( '/?p=21' ) ); ?>">Technik</a></li>
+                        <li><a id="tab4" href="<?php echo esc_url( home_url( '/?p=21' ) ); ?>">Termine</a></li>
                     </ul>
                 </div>                
                 <div class="mainNav-tab" id="mainNav-tab1">

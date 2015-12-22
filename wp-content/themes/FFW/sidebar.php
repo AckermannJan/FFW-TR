@@ -30,15 +30,8 @@
                     $year =  date( Y, $timestamp  );
                     $minute =  date( i, $timestamp  );
                     $hour =  date( g, $timestamp  );
-                    if(types_render_field("einsatzicon", array("output"=>"raw")) == 1){
-                            echo "<img src='/wp-content/themes/FFW/imgs/fire.png' style='height: 30px;padding: 10px;'>";
-                    }else if(types_render_field("einsatzicon", array("output"=>"raw")) == 2){
-                            echo "<img src='/wp-content/themes/FFW/imgs/tools.png' style='height: 30px;padding: 10px;'>";
-                    }else{
-                            echo "<img src='/wp-content/themes/FFW/imgs/alarm.png' style='height: 30px;padding: 10px;'>";
-                    }
-                    echo '<div class="scroll-box" style="width: 230px;height: 20px;position: absolute;top: 16px;left: 50px;"><marquee behavior="scroll" scrollamount="4" direction="left" width="230"><a href="'. get_permalink() .'" style="font-size:16px">'.get_the_title().' ';				
-                    echo $day,'.',$month,'.',$year , '</a></marquee></div>'; 
+                    echo '<div class="scroll-box" style="width: 270px;height: 20px;position: absolute;top: 16px;left: 10px;"><a href="'. get_permalink() .'" style="font-size:16px">'.get_the_title().' ';				
+                    echo '</a></div>'; 
                 }
             ?>
         </div>

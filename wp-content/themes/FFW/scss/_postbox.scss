@@ -9,19 +9,19 @@ and open the template in the editor.
 */
 
 .postBox{
-    height:400px;
-    width: 750px;
+    height:500px;
+    width: 990px;
     margin-bottom:20px;
     background-color: #373737;
     color:white;
     position: relative;
     &-img{
         float: left;
-        width: 500px;
-        height: 400px;
+        width: 670px;
+        height: 500px;
         img{
-            width: 500px;
-            height: 400px;
+            width: 670px;
+            height: 500px;
         }
         &:after{
             content: '';
@@ -30,11 +30,11 @@ and open the template in the editor.
             background-color: $MainBlue;
             position: absolute;
             top: 0;
-            left: 500px;
+            left: 670px;
         }
     }
     &-content{
-        width: 210px;
+        width: 270px;
         height: 85%;
         padding-left: 30px;
         padding-right: 10px;
@@ -58,7 +58,7 @@ and open the template in the editor.
             border-style: solid;
             border-width: 7.5px 0px 7.5px 10px;
             border-color: transparent transparent transparent #1C97E3;
-            left: 510px;
+            left: 680px;
             top: 30px;
         }
     }
