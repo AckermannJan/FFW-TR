@@ -22,7 +22,7 @@
     <div class="mainFlex mainFlex--smallMargin">
         <div class="mainFlex-left"><?php  get_sidebar(); ?></div>
         <div class="mainFlex-right einsatz">
-            <div class="singlePost">
+            <div class="singlePost scan">
                 <div class="singlePost-titelBar">
                     <h1><?php the_title();?></h1>
                 </div>

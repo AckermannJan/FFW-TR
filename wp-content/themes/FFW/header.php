@@ -21,12 +21,13 @@ echo $pageid;
         <script src="/wp-content/themes/FFW/js/details.js" type="text/javascript"></script>
         <script src="/wp-content/themes/FFW/js/simpleWeather.min.js" type="text/javascript"></script>
         <script src="/wp-content/themes/FFW/plugins/Slides-SlidesJS-3/source/jquery.slides.js"></script>
+        <script src="/wp-content/themes/FFW/plugins/WordScanner/WordScanner.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     </head>
     <body>    
         <header>            
             <div class="stage" style="width: 1300px;">
-                <img alt="Feuerwehr-Traisa Gerätehaus"src="http://img.webme.com/pic/f/feuer-aua/header-zeichnung-linksbun.jpg" /></a>
+                <img style="width: 1300px;" alt="Feuerwehr-Traisa Gerätehaus"src="http://img.webme.com/pic/f/feuer-aua/header-zeichnung-linksbun.jpg" /></a>
             </div>
             <div class="mainNav fullscreen">
                 <div class="mainNav-header">
@@ -62,7 +63,22 @@ echo $pageid;
                 <div class="mainNav-tab" id="mainNav-tab3">
                     <div class="mainNav-tab--content" >
                         <ul class="linkList linkList-arrowRight linkList-arrowRight--mainNav">
-                            <?php wp_list_pages("title_li=&child_of=60");  ?>
+                            <li><a href="/jugendfeuerwehr">Jugendfeuerwehr</a></li>
+                            <div style="margin-left: 10px;"><?php wp_list_pages("title_li=&child_of=185");  ?>
+                            <?php query_posts('category_name=jugend&showposts=20'); ?>
+                            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                                <li><a href="<?php the_permalink()?>"><?php the_title(); ?></a></li>
+                            <?php endwhile; ?>
+                            <?php endif; wp_reset_query();  ?></div>
+                        </ul>
+                        <ul class="linkList linkList-arrowRight linkList-arrowRight--mainNav">
+                            <li><a href="/wichtelwehr">Wichtelwehr</a></li>
+                            <div style="margin-left: 10px;"><?php wp_list_pages("title_li=&child_of=188");  ?>
+                            <?php query_posts('category_name=wichtel&showposts=20'); ?>
+                            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                            <li><a href="<?php the_permalink()?>"><?php the_title(); ?></a></li>
+                            <?php endwhile; ?>
+                            <?php endif; wp_reset_query();  ?></div>
                         </ul>
                     </div>
                     <div class="mainNav-tab--divider">

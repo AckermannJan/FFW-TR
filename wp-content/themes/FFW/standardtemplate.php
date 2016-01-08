@@ -7,8 +7,8 @@
 <div class="wrapper">
     <div class="mainFlex" style="margin-top: -11px;">
         <div class="mainFlex-left"><?php  get_sidebar(); ?></div>
-        <div class="mainFlex-right">
-            <div class="singlePost">              
+        <div class="mainFlex-right ">
+            <div class="singlePost scan">              
                 <?php $pageid = $_GET["page_id"]; get_page( pageid );  ?>
                 <div class="singlePost-titelBar">
                     <h1><?php the_title();?></h1>

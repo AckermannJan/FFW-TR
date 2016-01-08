@@ -32,8 +32,6 @@ and open the template in the editor.
 .linkList{
     &-arrowRight{
         list-style-image: url('imgs/icon-arrow-right.png');
-        &--mainNav{
-        }
     }
     li{
        a{
@@ -43,4 +41,42 @@ and open the template in the editor.
         } 
     }
     
+}
+
+.fullButton{
+    height: 50px;
+    width: 100%;    
+    position: relative;
+    background-color: #1C96E3;
+    top: -8px;
+    margin-bottom: 10px;
+    &:after{
+        content: "";
+        background-image: url("imgs/img-arrow-menu.png");
+        background-repeat: no-repeat;
+        background-size: 40px auto;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        right: 15px;
+        top: 5px;     
+    }
+    a{
+        text-decoration: none;
+    }
+    p{
+        padding: 7px 0px 0px;
+        margin: 0px;
+        line-height: 37px;
+        font-family: Arial;
+        color: #E8E8E8;
+        font-size: 25px;
+        font-weight: bold;
+        padding-left: 15px;
+    }
 }

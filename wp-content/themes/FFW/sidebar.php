@@ -18,7 +18,7 @@
     <div class="sideBar-titel">
         <h3>Letzter Einsatz</h3>
     </div>
-    <div class="sideBar-content" style="height: 0px;min-height: 50px;position:relative;overflow:hidden;">
+    <div class="sideBar-content scan" style="height: 0px;min-height: 50px;position:relative;overflow:hidden;">
         <div id="letzterEinsatz">
             <?php  
                 $args = array( 'posts_per_page' => 1, 'order'=> 'DESC',post_type =>  array( 'einsatz' ) );
@@ -52,7 +52,7 @@ $postslist = get_posts( $args );
 foreach ( $postslist as $post ) {
         setup_postdata( $post ); 
 ?> 
-<div class="sideBar ">
+<div class="sideBar scan">
     <div class="sideBar-titel">
         <h3><?php the_title(); ?></h3>
     </div>

@@ -657,6 +657,8 @@ a:focus{
     text-decoration: none;
     font-weight: bold;
     color: #1c96e3; }
+  .SingleContent td {
+    color: #fff; }
   .SingleContent #main {
     padding-top: 22px;
     padding-bottom: 1px;
@@ -726,6 +728,8 @@ a:focus{
       color: white;
       padding-left: 45px; }
     .singlePost-content a {
+      color: white; }
+    .singlePost-content td {
       color: white; }
     .singlePost-content--topPadding {
       padding-top: 20px; }
@@ -1003,6 +1007,40 @@ and open the template in the editor.
   color: white;
   text-decoration: none;
   font-family: Arial; }
+
+.fullButton {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  background-color: #1C96E3;
+  top: -8px;
+  margin-bottom: 10px; }
+  .fullButton:after {
+    content: "";
+    background-image: url("imgs/img-arrow-menu.png");
+    background-repeat: no-repeat;
+    background-size: 40px auto;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: 15px;
+    top: 5px; }
+  .fullButton a {
+    text-decoration: none; }
+  .fullButton p {
+    padding: 7px 0px 0px;
+    margin: 0px;
+    line-height: 37px;
+    font-family: Arial;
+    color: #E8E8E8;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 15px; }
 
 /*
 To change this license header, choose License Headers in Project Properties.
