@@ -19,11 +19,12 @@ echo $pageid;
         <script src="/wp-content/themes/FFW/js/menu.js" type="text/javascript"></script>
         <script src="/wp-content/themes/FFW/js/TopBarNav.js" type="text/javascript"></script>
         <script src="/wp-content/themes/FFW/js/details.js" type="text/javascript"></script>
-        <script src="/wp-content/themes/FFW/js/simpleWeather.min.js" type="text/javascript"></script>
+        <script src="/wp-content/themes/FFW/plugins/simpleWeather/jquery.simpleWeather.js" type="text/javascript"></script>
         <script src="/wp-content/themes/FFW/plugins/Slides-SlidesJS-3/source/jquery.slides.js"></script>
         <script src="/wp-content/themes/FFW/plugins/WordScanner/WordScanner.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     </head>
+    
     <body>    
         <header>            
             <div class="stage" style="width: 1300px;">

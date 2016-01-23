@@ -5,12 +5,9 @@
     <div class="sideBar-titel">
         <h3>Wetter</h3>
     </div>
-    <div class="sideBar-content" style="height: 196px;">
+    <div class="sideBar-content" style="height: 146px;">
         <div id="weather">
           
-        </div>
-        <div class="sideBar-unwetter">
-            <p>Keine Unwetterwarung</p>
         </div>
     </div>
 </div>
@@ -73,7 +70,7 @@ wp_reset_postdata();
     // Docs at http://simpleweatherjs.com
 $(document).ready(function() {
   $.simpleWeather({
-    location: '64283',
+    location: '64367',
     woeid: '',
     unit: 'c',
     success: function(weather) {  
