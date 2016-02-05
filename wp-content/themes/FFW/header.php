@@ -7,7 +7,7 @@ echo $pageid;
 ?>
 <?php wp_head(); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">    
     <head>
         <meta charset="utf-8" />
         <title><?php echo "Feuerwehr Mühltal Traisa | ".get_the_title( $pageid )?></title>
@@ -18,7 +18,6 @@ echo $pageid;
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
         <script src="/wp-content/themes/FFW/js/menu.js" type="text/javascript"></script>
         <script src="/wp-content/themes/FFW/js/TopBarNav.js" type="text/javascript"></script>
-        <script src="/wp-content/themes/FFW/js/details.js" type="text/javascript"></script>
         <script src="/wp-content/themes/FFW/plugins/simpleWeather/jquery.simpleWeather.js" type="text/javascript"></script>
         <script src="/wp-content/themes/FFW/plugins/Slides-SlidesJS-3/source/jquery.slides.js"></script>
         <script src="/wp-content/themes/FFW/plugins/WordScanner/WordScanner.js"></script>

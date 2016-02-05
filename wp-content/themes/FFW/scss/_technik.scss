@@ -8,10 +8,11 @@
         top: 37px;
         left: 73px;
         overflow:hidden;
+        background-color: #fff;
         img{
-            height: 120px;
-            margin-left: -15px;
-            margin-top: -10px;
+            height: 60px;
+            margin-left: 0px;
+            margin-top: 8px;
         } 
     } 
     .smallRoundBox{
@@ -24,6 +25,9 @@
         left: 77px;
         overflow: hidden;
         margin-right: 20px;
+        img{
+            height: 50px;
+        }
     }
     .entry{
         margin-left: 190px;

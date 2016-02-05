@@ -718,15 +718,39 @@ a:focus{
   .singlePost-content {
     min-height: 300px;
     background-color: #373737; }
-    .singlePost-content p {
+    .singlePost-content .text {
       margin: 0;
       color: white;
       padding-left: 45px;
-      padding-right: 10px;
+      padding-right: 45px;
       padding-bottom: 5px; }
     .singlePost-content h1, .singlePost-content h2, .singlePost-content h3, .singlePost-content h4, .singlePost-content h5, .singlePost-content h6 {
-      color: white;
-      padding-left: 45px; }
+      color: white; }
+    .singlePost-content h1 {
+      font-size: 26px;
+      line-height: 1.3846153846; }
+    .singlePost-content h2 {
+      font-size: 24px;
+      line-height: 1; }
+    .singlePost-content h3 {
+      font-size: 22px;
+      line-height: 1.0909090909; }
+    .singlePost-content h4 {
+      font-size: 20px;
+      line-height: 1.2; }
+    .singlePost-content h5 {
+      font-size: 18px;
+      line-height: 1.3333333333; }
+    .singlePost-content h6 {
+      font-size: 16px;
+      line-height: 1.5; }
+    .singlePost-content h1:first-child,
+    .singlePost-content h2:first-child,
+    .singlePost-content h3:first-child,
+    .singlePost-content h4:first-child,
+    .singlePost-content h5:first-child,
+    .singlePost-content h6:first-child {
+      margin-top: 0; }
     .singlePost-content a {
       color: white; }
     .singlePost-content td {
@@ -845,11 +869,12 @@ a:focus{
   position: relative;
   top: 37px;
   left: 73px;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #fff; }
   .technik .roundBox img {
-    height: 120px;
-    margin-left: -15px;
-    margin-top: -10px; }
+    height: 60px;
+    margin-left: 0px;
+    margin-top: 8px; }
 .technik .smallRoundBox {
   height: 50px;
   width: 50px;
@@ -860,6 +885,8 @@ a:focus{
   left: 77px;
   overflow: hidden;
   margin-right: 20px; }
+  .technik .smallRoundBox img {
+    height: 50px; }
 .technik .entry {
   margin-left: 190px;
   font-family: Arial;

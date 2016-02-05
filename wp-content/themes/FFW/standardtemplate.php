@@ -8,19 +8,21 @@
     <div class="mainFlex" style="margin-top: -11px;">
         <div class="mainFlex-left"><?php  get_sidebar(); ?></div>
         <div class="mainFlex-right ">
-            <div class="singlePost scan">              
+            <div class="singlePost scan">                   
                 <?php $pageid = $_GET["page_id"]; get_page( pageid );  ?>
                 <div class="singlePost-titelBar">
                     <h1><?php the_title();?></h1>
                 </div>
                 <div class="singlePost-content singlePost-content--topPadding singlePost-content--bottomPadding">
-                    <?php the_content();?>
-                    <div class="imgGalerie">
-                        <?php if(types_render_field("medienbilder", array("output"=>"raw")) != ""){?>
-                        <div id="slides">
-                            <?php echo types_render_field("medienbilder", array("output"=>"html"));?>
-                        </div>  
-                        <?php } ?>
+                    <div class="text">
+                        <?php the_content();?>
+                        <div class="imgGalerie">
+                            <?php if(types_render_field("medienbilder", array("output"=>"raw")) != ""){?>
+                            <div id="slides">
+                                <?php echo types_render_field("medienbilder", array("output"=>"html"));?>
+                            </div>  
+                            <?php } ?>
+                        </div>                        
                     </div>
                 </div>
             </div>
