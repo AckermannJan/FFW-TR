@@ -19,16 +19,25 @@ $TextBackground: #373737;
 .sideBar{
     margin-bottom:20px;
     position: relative;
-    top: -7px;
+    display: inline;
+    padding-top: 20px;
+    top:185px;
     &-titel{
         height:50px;
-        width:100%;
+        width:auto;
         background-color:$MainBlue;
         text-align:center;
-        line-height: 50px;
+        line-height: 50px;        
         @include TitelFont(25px, true);
         h3{
-            margin-top: 5px;
+            margin: 0px !important;
+        }
+        &--underline{
+           background-color: transparent; 
+           text-align:left;
+           font-weight: normal;
+           border-bottom: solid 2px $MainBlue;
+           line-height: 70px;
         }
     }
     &-content{
@@ -103,12 +112,12 @@ $TextBackground: #373737;
         .icon-8:before { content: "W"; }
         .icon-9:before { content: "I"; }
         .icon-10:before { content: "W"; }
-        .icon-11:before { content: "I"; }
-        .icon-12:before { content: "I"; }
-        .icon-13:before { content: "I"; }
-        .icon-14:before { content: "I"; }
+        .icon-11:before { content: "I"; top:-30px !important;position: relative;}
+        .icon-12:before { content: "I"; top:-30px !important;position: relative;}
+        .icon-13:before { content: "I"; top:-30px !important;position: relative;}
+        .icon-14:before { content: "I"; top:-30px !important;position: relative;}
         .icon-15:before { content: "W"; }
-        .icon-16:before { content: "I"; }
+        .icon-16:before { content: "I"; top:-30px !important;position: relative;}
         .icon-17:before { content: "W"; }
         .icon-18:before { content: "U"; }
         .icon-19:before { content: "Z"; }
@@ -143,6 +152,8 @@ $TextBackground: #373737;
 
         .leftWrapper{
             float:left;
+            margin-top:-10px;
+            margin-left: 27px;
         }
 
         .img{
@@ -150,22 +161,20 @@ $TextBackground: #373737;
             height:128px;
             float:right;
             position: relative;
-            left: -30px;
+            left: -80px;
         }
 
         .wind, .temp, .sun{
-            width:112px;
-            height:36px;
-            margin-bottom:10px;          
-        }
-        .temp p, .sun p{
-            padding-top: 10px;
-            margin-left:50px;
-        }
-        .wind p{            
-            padding:0px;
-            margin:0px;
-            padding-left:50px;
+            width:80px;
+            height:30px;      
+            float:left;
+            img{
+                height:20px;
+            }
+            p{
+                padding: 0;
+                margin-left: 23px;
+            }
         }
     }
     &-unwetter{
@@ -186,4 +195,76 @@ $TextBackground: #373737;
         }
     }
 }
+.datum{
+    float:left;
+    margin-right: 15px;    
+    height: 60px;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,.1);
+    width: 60px;
+    color: rgb(0, 0, 0);
+    border: solid 5px $MainBlue;
+    text-align: center;
+    padding-top: 10px; 
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        transparent 50%,
+        $MainBlue 50%,
+        $MainBlue
+      ) repeat;
+    position: relative; 
     
+    span:first-child{
+        margin-top: 0px;
+        font-size: 16px;
+        font-weight: bold;
+        display: block;
+        color: $MainBlue;
+    }
+    span:last-child{
+        margin-top: 11px;
+        font-size: 26px;
+        font-weight: bold;
+        display: block;
+        color:#fff;
+    }
+}
+.titel{
+    margin-left: 84px;
+    span:first-child{
+        font-size: 18px;
+        margin-top: 14px;
+        display: block;  
+        height: 50px;
+    }
+    span:nth-child(2){
+        display: block;
+        margin-top: -15px;
+        height: 100%;
+        overflow: hidden;
+    }
+    span:last-child{
+        font-size: 14px;
+        margin-top: 14px;
+        display: block;  
+        margin-bottom: 20px;
+    }
+    
+}
+.terminBig{
+    color:#fff;
+    text-decoration: none;
+    position: relative;
+}
+.divider{
+    width:100%;
+    height:1px;
+    background: repeating-linear-gradient(
+        to right,
+        transparent,
+        transparent 5px,
+        $MainBlue 5px,
+        $MainBlue 8px
+      ) repeat;
+    margin-bottom: 14px;
+}

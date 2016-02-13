@@ -1,21 +1,17 @@
 <?php
-    /* Template Name: Wichtel */ 
+    /* Template Name: Archiv */ 
 ?>
 <?php get_header(); ?>
 <div class="wrapper">
     <div class="mainFlex" style="margin-top: -10px;">
         <div class="mainFlex-left"><?php  get_sidebar(); ?></div>
         <div class="mainFlex-right">
-            <div class="fullButton">
-                <a href="/wichtelwehr/info/"><p>Zur Infoseite</p></a>
-            </div>
-            
             <?php       
-                $args = array( 'posts_per_page' => 20, 'order'=> 'DESC', 'category_name' => 'wichtel',post_type =>  array( 'post', 'page'));
+                $args = array( 'posts_per_page' => 1000, 'order'=> 'DESC', post_type =>  array( 'post', 'page'));
                 $postslist = get_posts( $args );
                 foreach ( $postslist as $post ) {
-                     setup_postdata( $post ); 
-                        if(types_render_field("archiv", array("output"=>"raw")) != 1){?> 
+                     setup_postdata( $post ); ?> 
+                    <?php if(types_render_field("archiv", array("output"=>"raw")) == 1){ ?>
                         <div class="postBox scan">
                             <div class="postBox-img">
                                 <img src="<?php
@@ -33,7 +29,7 @@
                                 <div class="btn"><a href="<?php echo get_permalink();?>">Weiter lesen</a></div>
                             </div>            
                         </div>        
-                <?php
+                <?php  
                     }
                 }
                 wp_reset_postdata();

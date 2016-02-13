@@ -22,7 +22,7 @@
                             <img src="/wp-content/themes/FFW/imgs/cars/kdow.jpg" />
                         </div>
                         <div class="entry">
-                            <span class="headLine">KdoW</span><br>
+                            <span class="headLine"><a href="/kdow" style="text-decoration: none">KdoW</a></span><br>
                             <span class="subLine"><?php echo types_render_field("einsatzart", array("output"=>"raw"));?></span>
                         </div>
                     </div>

@@ -18,6 +18,8 @@ and open the template in the editor.
     margin-top: -20px;
     &-left{
         display:table-cell;
+        position: relative;
+        padding-bottom: 185px;
     }
     
     &-right{

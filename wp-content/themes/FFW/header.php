@@ -2,6 +2,19 @@
 $pageid = $_GET["page_id"]; get_page( pageid );
 echo $pageid;
 
+$tageShort = array("SO", "MO", "DI", "MI", "DO", "FRg", "SA");
+$monate = array(1=>"Januar",
+                2=>"Februar",
+                3=>"M&auml;rz",
+                4=>"April",
+                5=>"Mai",
+                6=>"Juni",
+                7=>"Juli",
+                8=>"August",
+                9=>"September",
+                10=>"Oktober",
+                11=>"November",
+                12=>"Dezember");
 
 
 ?>
@@ -16,18 +29,18 @@ echo $pageid;
 		<meta http-equiv="content-language" content="<?php language_attributes( $doctype );?>">
 		<link type="text/css" href="/wp-content/themes/FFW/style.css" rel="stylesheet">
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-        <script src="/wp-content/themes/FFW/js/menu.js" type="text/javascript"></script>
+        <script src="/wp-content/themes/FFW/plugins/Slides-SlidesJS-3/source/jquery.slides.js"></script>        
         <script src="/wp-content/themes/FFW/js/TopBarNav.js" type="text/javascript"></script>
-        <script src="/wp-content/themes/FFW/plugins/simpleWeather/jquery.simpleWeather.js" type="text/javascript"></script>
-        <script src="/wp-content/themes/FFW/plugins/Slides-SlidesJS-3/source/jquery.slides.js"></script>
+        <script src="/wp-content/themes/FFW/plugins/simpleWeather/jquery.simpleWeather.js" type="text/javascript"></script>        
         <script src="/wp-content/themes/FFW/plugins/WordScanner/WordScanner.js"></script>
+        <script src="/wp-content/themes/FFW/js/menu.js" type="text/javascript"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     </head>
     
     <body>    
         <header>            
-            <div class="stage" style="width: 1300px;">
-                <img style="width: 1300px;" alt="Feuerwehr-Traisa Gerätehaus"src="http://img.webme.com/pic/f/feuer-aua/header-zeichnung-linksbun.jpg" /></a>
+            <div class="stage">
+                <img alt="Feuerwehr-Traisa Gerätehaus"src="http://img.webme.com/pic/f/feuer-aua/header-zeichnung-linksbun.jpg" /></a>
             </div>
             <div class="mainNav fullscreen">
                 <div class="mainNav-header">
@@ -37,7 +50,7 @@ echo $pageid;
                         <li><a id="tab2" href="<?php echo esc_url( home_url( '/?p=59' ) ); ?>">Verein</a></li>
                         <li><a id="tab3" href="<?php echo esc_url( home_url( '/?p=60' ) ); ?>">Kindergruppen</a></li>
                         <li><a id="tab4" href="<?php echo esc_url( home_url( '/?p=21' ) ); ?>">Technik</a></li>
-                        <li><a id="tab4" href="<?php echo esc_url( home_url( '/?p=21' ) ); ?>">Termine</a></li>
+                        <li><a id="tab4" href="<?php echo esc_url( home_url( '/termine' ) ); ?>">Termine</a></li>
                     </ul>
                 </div>                
                 <div class="mainNav-tab" id="mainNav-tab1">

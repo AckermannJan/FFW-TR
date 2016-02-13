@@ -4,11 +4,11 @@
         <div class="mainFlex-left"><?php  get_sidebar(); ?></div>
         <div class="mainFlex-right">
             <?php       
-                $args = array( 'posts_per_page' => 20, 'order'=> 'DESC',post_type =>  array( 'post', 'page'));
+                $args = array( 'posts_per_page' => 40, 'order'=> 'DESC',post_type =>  array( 'post', 'page'));
                 $postslist = get_posts( $args );
                 foreach ( $postslist as $post ) {
                      setup_postdata( $post ); 
-                     if(types_render_field("visibleonstart", array("output"=>"raw"))==1){?> 
+                     if(types_render_field("visibleonstart", array("output"=>"raw"))==1 && types_render_field("archiv", array("output"=>"raw")) != 1){?>             
                         <div class="postBox scan">
                             <div class="postBox-img">
                                 <img src="<?php

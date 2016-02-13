@@ -63,6 +63,23 @@ $TextBackground: #373737;
             }
 
         }
+        #row4{
+            float:left;
+            width:350px;
+            height:100%;
+            p#con{
+                margin-top:-2px;
+                color:gray;
+                font-family:Arial;
+                font-style:none;
+                text-decoration: none;
+            }
+            a{
+                text-decoration: none;
+                color:$MainBlue
+            }
+
+        }
     }
 }
 #smalltitel{

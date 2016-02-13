@@ -1,7 +1,6 @@
 <?php
 	$postid = $_GET["p"];
 	get_post( $postid );    
-	/* Template Name: impressum */
 	get_header();
 ?>
 <br><br>

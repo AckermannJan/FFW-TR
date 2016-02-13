@@ -121,6 +121,19 @@ and open the template in the editor.
       #footer #FooterContent #row3 a {
         text-decoration: none;
         color: #1c96e3; }
+    #footer #FooterContent #row4 {
+      float: left;
+      width: 350px;
+      height: 100%; }
+      #footer #FooterContent #row4 p#con {
+        margin-top: -2px;
+        color: gray;
+        font-family: Arial;
+        font-style: none;
+        text-decoration: none; }
+      #footer #FooterContent #row4 a {
+        text-decoration: none;
+        color: #1c96e3; }
 
 #smalltitel {
   color: gray;
@@ -149,7 +162,7 @@ header {
     height: 55px;
     position: relative;
     background-color: #1C96E3;
-    box-shadow: 0px 0px 3px 1px #C3C3C3;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
     .mainNav-header--item {
@@ -415,10 +428,12 @@ a:focus{
 .sideBar {
   margin-bottom: 20px;
   position: relative;
-  top: -7px; }
+  display: inline;
+  padding-top: 20px;
+  top: 185px; }
   .sideBar-titel {
     height: 50px;
-    width: 100%;
+    width: auto;
     background-color: #1c96e3;
     text-align: center;
     line-height: 50px;
@@ -427,7 +442,13 @@ a:focus{
     font-size: 25px;
     font-weight: bold; }
     .sideBar-titel h3 {
-      margin-top: 5px; }
+      margin: 0px !important; }
+    .sideBar-titel--underline {
+      background-color: transparent;
+      text-align: left;
+      font-weight: normal;
+      border-bottom: solid 2px #1c96e3;
+      line-height: 70px; }
   .sideBar-content {
     background-image: url(imgs/bg.png);
     background-color: #373737;
@@ -503,17 +524,27 @@ a:focus{
     .sideBar-content .icon-10:before {
       content: "W"; }
     .sideBar-content .icon-11:before {
-      content: "I"; }
+      content: "I";
+      top: -30px !important;
+      position: relative; }
     .sideBar-content .icon-12:before {
-      content: "I"; }
+      content: "I";
+      top: -30px !important;
+      position: relative; }
     .sideBar-content .icon-13:before {
-      content: "I"; }
+      content: "I";
+      top: -30px !important;
+      position: relative; }
     .sideBar-content .icon-14:before {
-      content: "I"; }
+      content: "I";
+      top: -30px !important;
+      position: relative; }
     .sideBar-content .icon-15:before {
       content: "W"; }
     .sideBar-content .icon-16:before {
-      content: "I"; }
+      content: "I";
+      top: -30px !important;
+      position: relative; }
     .sideBar-content .icon-17:before {
       content: "W"; }
     .sideBar-content .icon-18:before {
@@ -577,24 +608,24 @@ a:focus{
     .sideBar-content .icon-47:before {
       content: "S"; }
     .sideBar-content .leftWrapper {
-      float: left; }
+      float: left;
+      margin-top: -10px;
+      margin-left: 27px; }
     .sideBar-content .img {
       width: 135px;
       height: 128px;
       float: right;
       position: relative;
-      left: -30px; }
+      left: -80px; }
     .sideBar-content .wind, .sideBar-content .temp, .sideBar-content .sun {
-      width: 112px;
-      height: 36px;
-      margin-bottom: 10px; }
-    .sideBar-content .temp p, .sideBar-content .sun p {
-      padding-top: 10px;
-      margin-left: 50px; }
-    .sideBar-content .wind p {
-      padding: 0px;
-      margin: 0px;
-      padding-left: 50px; }
+      width: 80px;
+      height: 30px;
+      float: left; }
+      .sideBar-content .wind img, .sideBar-content .temp img, .sideBar-content .sun img {
+        height: 20px; }
+      .sideBar-content .wind p, .sideBar-content .temp p, .sideBar-content .sun p {
+        padding: 0;
+        margin-left: 23px; }
   .sideBar-unwetter {
     height: 50px;
     width: 100%;
@@ -610,6 +641,60 @@ a:focus{
       font-size: 23px;
       left: 40px;
       top: 10px; }
+
+.datum {
+  float: left;
+  margin-right: 15px;
+  height: 60px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+  width: 60px;
+  color: black;
+  border: solid 5px #1c96e3;
+  text-align: center;
+  padding-top: 10px;
+  background: linear-gradient(to bottom, transparent, transparent 50%, #1c96e3 50%, #1c96e3) repeat;
+  position: relative; }
+  .datum span:first-child {
+    margin-top: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    color: #1c96e3; }
+  .datum span:last-child {
+    margin-top: 11px;
+    font-size: 26px;
+    font-weight: bold;
+    display: block;
+    color: #fff; }
+
+.titel {
+  margin-left: 84px; }
+  .titel span:first-child {
+    font-size: 18px;
+    margin-top: 14px;
+    display: block;
+    height: 50px; }
+  .titel span:nth-child(2) {
+    display: block;
+    margin-top: -15px;
+    height: 100%;
+    overflow: hidden; }
+  .titel span:last-child {
+    font-size: 14px;
+    margin-top: 14px;
+    display: block;
+    margin-bottom: 20px; }
+
+.terminBig {
+  color: #fff;
+  text-decoration: none;
+  position: relative; }
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: repeating-linear-gradient(to right, transparent, transparent 5px, #1c96e3 5px, #1c96e3 8px) repeat;
+  margin-bottom: 14px; }
 
 .SingleHead {
   position: relative;
@@ -695,7 +780,8 @@ a:focus{
 
 .singlePost {
   position: relative;
-  top: -11px; }
+  top: -11px;
+  width: 990px; }
   .singlePost-titelBar {
     background-color: #1c96e3;
     height: 50px; }
@@ -717,13 +803,15 @@ a:focus{
       top: 50px; }
   .singlePost-content {
     min-height: 300px;
-    background-color: #373737; }
+    background-color: rgba(59, 59, 59, 0.34); }
     .singlePost-content .text {
       margin: 0;
       color: white;
       padding-left: 45px;
       padding-right: 45px;
       padding-bottom: 5px; }
+      .singlePost-content .text p {
+        min-height: 20px; }
     .singlePost-content h1, .singlePost-content h2, .singlePost-content h3, .singlePost-content h4, .singlePost-content h5, .singlePost-content h6 {
       color: white; }
     .singlePost-content h1 {
@@ -817,7 +905,7 @@ a:focus{
     .einsatz .einsatzInfo .entry .subLine, .einsatz .einsatzFahrzeuge .entry .subLine, .einsatz .einsatzBericht .entry .subLine {
       margin-left: 15px; }
 .einsatz .einsatzFahrzeuge {
-  background-color: #fff;
+  background-color: #E9EAED;
   color: #666161; }
   .einsatz .einsatzFahrzeuge:after {
     content: "";
@@ -856,7 +944,7 @@ a:focus{
     height: 0px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 16px solid #fff;
+    border-top: 16px solid #E9EAED;
     left: 40px;
     top: 0px;
     z-index: 999; }
@@ -1082,7 +1170,7 @@ and open the template in the editor.
   height: 500px;
   width: 990px;
   margin-bottom: 20px;
-  background-color: #373737;
+  background-color: rgba(59, 59, 59, 0.34);
   color: white;
   position: relative; }
   .postBox-img {
@@ -1142,7 +1230,9 @@ and open the template in the editor.
   margin-left: -20px;
   margin-top: -20px; }
   .mainFlex-left {
-    display: table-cell; }
+    display: table-cell;
+    position: relative;
+    padding-bottom: 185px; }
   .mainFlex-right {
     display: table-cell;
     width: 990px; }

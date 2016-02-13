@@ -21,6 +21,8 @@ and open the template in the editor.
       color: #FFF; }
       .einsatzTabelle table tr td a {
         text-decoration: none; }
+      .einsatzTabelle table tr td:nth-child(3) {
+        padding-right: 20px; }
 .einsatzTabelle .smallRoundBox {
   height: 30px;
   width: 30px;
@@ -31,9 +33,9 @@ and open the template in the editor.
   margin-left: 25px; }
   .einsatzTabelle .smallRoundBox img {
     border: solid 0px !important;
-    width: 40px;
-    margin-left: 6px;
-    margin-top: 4px; }
+    height: 20px;
+    margin-top: 4px;
+    margin-left: 5px; }
 .einsatzTabelle .yearNav {
   position: absolute;
   left: 150px;
@@ -119,6 +121,19 @@ and open the template in the editor.
       #footer #FooterContent #row3 a {
         text-decoration: none;
         color: #1c96e3; }
+    #footer #FooterContent #row4 {
+      float: left;
+      width: 350px;
+      height: 100%; }
+      #footer #FooterContent #row4 p#con {
+        margin-top: -2px;
+        color: gray;
+        font-family: Arial;
+        font-style: none;
+        text-decoration: none; }
+      #footer #FooterContent #row4 a {
+        text-decoration: none;
+        color: #1c96e3; }
 
 #smalltitel {
   color: gray;
@@ -140,14 +155,14 @@ header {
   z-index: 1; }
 
 .mainNav {
-  width: 1050px;
+  width: 1300px;
   position: relative; }
   .mainNav-header {
     width: 100%;
     height: 55px;
     position: relative;
     background-color: #1C96E3;
-    box-shadow: 0px 0px 3px 1px #C3C3C3;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
     .mainNav-header--item {
@@ -165,7 +180,7 @@ header {
         .mainNav-header--item li:first-child {
           width: 55px;
           height: 55px;
-          background: url(../imgs/HOME.png) no-repeat scroll center; }
+          background: url(imgs/HOME.png) no-repeat scroll center; }
         .mainNav-header--item li a {
           font-size: 25px;
           text-decoration: none;
@@ -173,14 +188,67 @@ header {
           font-weight: bold;
           font-family: Arial;
           cursor: pointer; }
+    .mainNav-header--dropperIcon {
+      float: right;
+      font-size: 40px;
+      font-weight: bold;
+      color: white;
+      transform: rotate(90deg);
+      margin-right: 10px;
+      margin-top: 5px;
+      cursor: pointer; }
+  .mainNav-dropDown {
+    margin: 0;
+    background-color: #1c96e3;
+    position: relative;
+    top: 23px;
+    padding: 15px; }
+    .mainNav-dropDown:before {
+      width: calc(100% - 30px);
+      height: 1px;
+      background-color: #FFF;
+      content: "";
+      z-index: 999999;
+      position: absolute;
+      top: 0px; }
+    .mainNav-dropDown #home {
+      font-size: 25px;
+      font-weight: bold; }
+    .mainNav-dropDown a {
+      text-decoration: none;
+      color: #fff; }
+    .mainNav-dropDown #tab1, .mainNav-dropDown #tab2, .mainNav-dropDown #tab3, .mainNav-dropDown #tab4 {
+      font-size: 25px;
+      font-weight: bold; }
+    .mainNav-dropDown--item {
+      list-style: none;
+      background-color: #1c96e3;
+      margin-left: -15px;
+      padding-left: 15px;
+      width: calc(100% + 15px); }
+      .mainNav-dropDown--item:before {
+        content: "\00BB \0020";
+        color: #fff;
+        vertical-align: 5px; }
+      .mainNav-dropDown--item ul {
+        background-color: #3FA2E0;
+        list-style-type: disc;
+        display: none; }
+        .mainNav-dropDown--item ul:first-child {
+          display: none; }
+      .mainNav-dropDown--item ul > li {
+        color: white; }
+      .mainNav-dropDown--item ul > li > span {
+        color: white; }
   .mainNav-tab {
-    width: 100%;
+    width: 30%;
     background: #1c96e3;
     height: 300px;
     position: absolute;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.3); }
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.3);
+    z-index: 999; }
     .mainNav-tab--divider {
       height: 50px;
       border-top: solid 1px #ccc;
@@ -190,8 +258,6 @@ header {
       padding-top: 5px; }
     .mainNav-tab--content {
       position: absolute; }
-      .mainNav-tab--content ul li:first-child {
-        display: none; }
     .mainNav-tab:before {
       content: '';
       position: absolute;
@@ -362,21 +428,23 @@ a:focus{
 .sideBar {
   margin-bottom: 20px;
   position: relative;
-  top: -14px; }
+  display: inline;
+  padding-top: 20px;
+  top: 185px; }
   .sideBar-titel {
     height: 50px;
     width: 100%;
     background-color: #1c96e3;
     text-align: center;
+    line-height: 50px;
     font-family: Arial;
     color: #e8e8e8;
     font-size: 25px;
     font-weight: bold; }
     .sideBar-titel h3 {
-      margin-top: 5px; }
+      margin: 0px !important; }
   .sideBar-content {
     background-image: url(imgs/bg.png);
-    margin-top: -16px;
     background-color: #373737;
     min-height: 100px;
     width: 100%;
@@ -424,7 +492,9 @@ a:focus{
       font-size: 210px;
       font-weight: normal;
       font-style: normal;
-      line-height: 0.76; }
+      line-height: 0;
+      position: relative;
+      top: 50px; }
     .sideBar-content .icon-0:before {
       content: ":"; }
     .sideBar-content .icon-1:before {
@@ -522,30 +592,81 @@ a:focus{
     .sideBar-content .icon-47:before {
       content: "S"; }
     .sideBar-content .leftWrapper {
-      float: left; }
+      float: left;
+      margin-top: -10px;
+      margin-left: 27px; }
     .sideBar-content .img {
       width: 135px;
       height: 128px;
       float: right;
       position: relative;
-      left: -30px; }
+      left: -80px; }
     .sideBar-content .wind, .sideBar-content .temp, .sideBar-content .sun {
-      width: 112px;
-      height: 36px;
-      margin-bottom: 10px; }
-    .sideBar-content .temp p, .sideBar-content .sun p {
-      padding-top: 10px;
-      margin-left: 50px; }
-    .sideBar-content .wind p {
+      width: 80px;
+      height: 30px;
+      float: left; }
+      .sideBar-content .wind img, .sideBar-content .temp img, .sideBar-content .sun img {
+        height: 20px; }
+      .sideBar-content .wind p, .sideBar-content .temp p, .sideBar-content .sun p {
+        padding: 0;
+        margin-left: 23px; }
+  .sideBar-unwetter {
+    height: 50px;
+    width: 100%;
+    background: #008000 url("imgs/flash31.png") no-repeat scroll 2% 44%/32px 32px;
+    background-color: green;
+    position: relative;
+    top: 137px; }
+    .sideBar-unwetter p {
+      height: 30px;
+      position: absolute;
       padding: 0px;
       margin: 0px;
-      padding-left: 50px; }
+      font-size: 23px;
+      left: 40px;
+      top: 10px; }
+
+.datum {
+  float: left;
+  margin-right: 15px;
+  height: 60px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+  width: 60px;
+  color: black;
+  border: solid 5px #1c96e3;
+  text-align: center;
+  padding-top: 10px;
+  position: relative; }
+  .datum:before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: red; }
+  .datum:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 3px;
+    border-radius: 3px;
+    background: gray;
+    position: absolute;
+    top: 4px;
+    left: 28px; }
+  .datum span {
+    margin-top: 11px;
+    font-size: 26px;
+    font-weight: bold;
+    display: block; }
+
+.titel span {
+  font-size: 18px;
+  margin-top: 14px;
+  display: block; }
 
 .SingleHead {
   position: relative;
   background-color: #1c96e3;
-  height: 50px;
-  width: 750px; }
+  height: 50px; }
   .SingleHead:after {
     content: '';
     position: absolute;
@@ -569,7 +690,6 @@ a:focus{
 .SingleContent {
   background-image: url(imgs/bg.png);
   background-color: #373737;
-  width: 750px;
   height: auto;
   margin-top: -16px;
   color: #c1c1c1; }
@@ -589,6 +709,8 @@ a:focus{
     text-decoration: none;
     font-weight: bold;
     color: #1c96e3; }
+  .SingleContent td {
+    color: #fff; }
   .SingleContent #main {
     padding-top: 22px;
     padding-bottom: 1px;
@@ -625,17 +747,17 @@ a:focus{
 
 .singlePost {
   position: relative;
-  top: -11px; }
+  top: -11px;
+  width: 990px; }
   .singlePost-titelBar {
     background-color: #1c96e3;
-    height: 50px;
-    width: 750px; }
+    height: 50px; }
     .singlePost-titelBar h1 {
       color: white;
       margin: 0;
       position: relative;
       top: 6px;
-      left: 30px; }
+      margin-left: 30px; }
     .singlePost-titelBar:after {
       content: '';
       position: absolute;
@@ -648,18 +770,43 @@ a:focus{
       top: 50px; }
   .singlePost-content {
     min-height: 300px;
-    width: 750px;
-    background-color: #373737; }
-    .singlePost-content p {
+    background-color: rgba(59, 59, 59, 0.34); }
+    .singlePost-content .text {
       margin: 0;
       color: white;
       padding-left: 45px;
-      padding-right: 10px;
+      padding-right: 45px;
       padding-bottom: 5px; }
     .singlePost-content h1, .singlePost-content h2, .singlePost-content h3, .singlePost-content h4, .singlePost-content h5, .singlePost-content h6 {
-      color: white;
-      padding-left: 45px; }
+      color: white; }
+    .singlePost-content h1 {
+      font-size: 26px;
+      line-height: 1.3846153846; }
+    .singlePost-content h2 {
+      font-size: 24px;
+      line-height: 1; }
+    .singlePost-content h3 {
+      font-size: 22px;
+      line-height: 1.0909090909; }
+    .singlePost-content h4 {
+      font-size: 20px;
+      line-height: 1.2; }
+    .singlePost-content h5 {
+      font-size: 18px;
+      line-height: 1.3333333333; }
+    .singlePost-content h6 {
+      font-size: 16px;
+      line-height: 1.5; }
+    .singlePost-content h1:first-child,
+    .singlePost-content h2:first-child,
+    .singlePost-content h3:first-child,
+    .singlePost-content h4:first-child,
+    .singlePost-content h5:first-child,
+    .singlePost-content h6:first-child {
+      margin-top: 0; }
     .singlePost-content a {
+      color: white; }
+    .singlePost-content td {
       color: white; }
     .singlePost-content--topPadding {
       padding-top: 20px; }
@@ -678,7 +825,7 @@ a:focus{
 .einsatz .einsatzInfo {
   color: white; }
 .einsatz .einsatzInfo, .einsatz .einsatzFahrzeuge, .einsatz .einsatzBericht {
-  width: 750px;
+  width: 990px;
   height: auto;
   background-color: #17689B;
   overflow: hidden;
@@ -707,6 +854,10 @@ a:focus{
     overflow: hidden;
     float: left;
     margin-right: 20px; }
+    .einsatz .einsatzInfo .smallRoundBox img, .einsatz .einsatzFahrzeuge .smallRoundBox img, .einsatz .einsatzBericht .smallRoundBox img {
+      height: 40px;
+      position: relative;
+      top: 3px; }
   .einsatz .einsatzInfo .entry, .einsatz .einsatzFahrzeuge .entry, .einsatz .einsatzBericht .entry {
     margin-left: 190px;
     font-family: Arial;
@@ -719,7 +870,7 @@ a:focus{
     .einsatz .einsatzInfo .entry .subLine, .einsatz .einsatzFahrzeuge .entry .subLine, .einsatz .einsatzBericht .entry .subLine {
       margin-left: 15px; }
 .einsatz .einsatzFahrzeuge {
-  background-color: #fff;
+  background-color: #E9EAED;
   color: #666161; }
   .einsatz .einsatzFahrzeuge:after {
     content: "";
@@ -758,7 +909,7 @@ a:focus{
     height: 0px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 16px solid #fff;
+    border-top: 16px solid #E9EAED;
     left: 40px;
     top: 0px;
     z-index: 999; }
@@ -771,11 +922,12 @@ a:focus{
   position: relative;
   top: 37px;
   left: 73px;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #fff; }
   .technik .roundBox img {
-    height: 120px;
-    margin-left: -15px;
-    margin-top: -10px; }
+    height: 60px;
+    margin-left: 0px;
+    margin-top: 8px; }
 .technik .smallRoundBox {
   height: 50px;
   width: 50px;
@@ -786,10 +938,14 @@ a:focus{
   left: 77px;
   overflow: hidden;
   margin-right: 20px; }
+  .technik .smallRoundBox img {
+    height: 50px; }
 .technik .entry {
   margin-left: 190px;
   font-family: Arial;
-  padding-bottom: 15px; }
+  padding-bottom: 15px;
+  position: relative;
+  top: -15px; }
   .technik .entry .headLine {
     text-transform: uppercase;
     font-size: 21px;
@@ -805,7 +961,9 @@ a:focus{
     text-transform: uppercase;
     font-size: 14px;
     font-weight: bold;
-    color: #FFF; }
+    color: #FFF;
+    position: relative;
+    top: -20px; }
   .technik .entrysmall .subLine {
     margin-left: 15px; }
 .technik .first {
@@ -821,13 +979,9 @@ a:focus{
   margin-left: 510px; }
 .technik .second .entrysmall .headLine {
   margin-left: 160px; }
-.technik #main h2 {
-  font-family: Arial;
-  text-transform: uppercase;
-  font-size: 30px;
-  font-weight: bold;
-  color: #FFF;
-  margin-left: 70px; }
+.technik h2 {
+  margin: 0;
+  padding-top: 20px; }
 .technik .static {
   clear: both !important; }
   .technik .static .entrysmall .headLine {
@@ -847,6 +1001,8 @@ a:focus{
       color: #FFF; }
       .einsatzTabelle table tr td a {
         text-decoration: none; }
+      .einsatzTabelle table tr td:nth-child(3) {
+        padding-right: 20px; }
 .einsatzTabelle .smallRoundBox {
   height: 30px;
   width: 30px;
@@ -857,9 +1013,9 @@ a:focus{
   margin-left: 25px; }
   .einsatzTabelle .smallRoundBox img {
     border: solid 0px !important;
-    width: 40px;
-    margin-left: 6px;
-    margin-top: 4px; }
+    height: 20px;
+    margin-top: 4px;
+    margin-left: 5px; }
 .einsatzTabelle .yearNav {
   position: absolute;
   left: 150px;
@@ -926,11 +1082,45 @@ and open the template in the editor.
     background-color: #1E5C84; }
 
 .linkList-arrowRight {
-  list-style-image: url("../imgs/icon-arrow-right.png"); }
+  list-style-image: url("imgs/icon-arrow-right.png"); }
 .linkList li a {
   color: white;
   text-decoration: none;
   font-family: Arial; }
+
+.fullButton {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  background-color: #1C96E3;
+  top: -8px;
+  margin-bottom: 10px; }
+  .fullButton:after {
+    content: "";
+    background-image: url("imgs/img-arrow-menu.png");
+    background-repeat: no-repeat;
+    background-size: 40px auto;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: 15px;
+    top: 5px; }
+  .fullButton a {
+    text-decoration: none; }
+  .fullButton p {
+    padding: 7px 0px 0px;
+    margin: 0px;
+    line-height: 37px;
+    font-family: Arial;
+    color: #E8E8E8;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 15px; }
 
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -942,19 +1132,19 @@ and open the template in the editor.
     Author     : Jan Ackermann
 */
 .postBox {
-  height: 400px;
-  width: 750px;
+  height: 500px;
+  width: 990px;
   margin-bottom: 20px;
-  background-color: #373737;
+  background-color: rgba(59, 59, 59, 0.34);
   color: white;
   position: relative; }
   .postBox-img {
     float: left;
-    width: 500px;
-    height: 400px; }
+    width: 670px;
+    height: 500px; }
     .postBox-img img {
-      width: 500px;
-      height: 400px; }
+      width: 670px;
+      height: 500px; }
     .postBox-img:after {
       content: '';
       height: 100%;
@@ -962,9 +1152,9 @@ and open the template in the editor.
       background-color: #1c96e3;
       position: absolute;
       top: 0;
-      left: 500px; }
+      left: 670px; }
   .postBox-content {
-    width: 210px;
+    width: 270px;
     height: 85%;
     padding-left: 30px;
     padding-right: 10px;
@@ -985,7 +1175,7 @@ and open the template in the editor.
       border-style: solid;
       border-width: 7.5px 0px 7.5px 10px;
       border-color: transparent transparent transparent #1C97E3;
-      left: 510px;
+      left: 680px;
       top: 30px; }
 
 /*
@@ -998,85 +1188,19 @@ and open the template in the editor.
     Author     : Jan Ackermann
 */
 .mainFlex {
-  width: 1090px;
+  width: 1340px;
   height: 500px;
   display: table;
   border-spacing: 20px;
   margin-left: -20px;
   margin-top: -20px; }
   .mainFlex-left {
-    display: table-cell; }
+    display: table-cell;
+    position: relative; }
   .mainFlex-right {
     display: table-cell;
-    width: 750px; }
+    width: 990px; }
   .mainFlex--smallMargin {
     margin-top: -11px; }
-
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 22.08.2015, 13:04:28
-    Author     : Jan Ackermann
-*/
-.imgGalerie {
-  width: 750px; }
-  .imgGalerie img {
-    margin-bottom: -6px;
-    border: solid 0px !important; }
-  .imgGalerie #slides {
-    text-align: center;
-    height: 424px;
-    width: 750px;
-    margin-bottom: -3px; }
-    .imgGalerie #slides .slidesjs-navigation {
-      position: relative;
-      top: -340px;
-      z-index: 999; }
-    .imgGalerie #slides .slidesjs-previous {
-      background: url(../imgs/previous.png) repeat scroll 0% 0% transparent;
-      display: block;
-      width: 94px;
-      height: 128px;
-      position: relative;
-      margin-top: 50px; }
-    .imgGalerie #slides .slidesjs-next {
-      background: url(../imgs/previous.png) repeat scroll 0% 0% transparent;
-      display: block;
-      float: right;
-      width: 94px;
-      height: 128px;
-      position: relative;
-      margin-top: -130px;
-      transform: rotate(180deg); }
-    .imgGalerie #slides .slidesjs-pagination {
-      padding: 0px;
-      margin: 0px;
-      list-style: none;
-      padding: 0px;
-      margin: 0px auto;
-      width: auto;
-      display: inline-block;
-      position: relative;
-      top: -230px;
-      margin-bottom: -20px; }
-      .imgGalerie #slides .slidesjs-pagination .slidesjs-pagination-item {
-        float: left;
-        padding: 5px; }
-        .imgGalerie #slides .slidesjs-pagination .slidesjs-pagination-item a {
-          height: 20px;
-          position: relative;
-          content: "a";
-          z-index: 2147483647;
-          background-color: #1c96e3;
-          width: 20px;
-          display: block;
-          border-radius: 50px;
-          box-shadow: 0 0 4px 1px #837A7A; }
-        .imgGalerie #slides .slidesjs-pagination .slidesjs-pagination-item .active {
-          display: block;
-          background-color: #43B0F5; }
 
 /*# sourceMappingURL=modules.css.map */

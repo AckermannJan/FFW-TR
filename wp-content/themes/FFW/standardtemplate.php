@@ -1,7 +1,4 @@
-<?php /* Template Name: Standardtemplate 
-@package WordPress
-@subpackage FFW
-@since Twenty Fourteen 1.0 */ ?>
+<?php /*   ?>
 
 <?php get_header();?>
 <div class="wrapper">
@@ -34,4 +31,4 @@
       $("#slides").slidesjs();
     });
 </script>
-<?php get_footer();?>
+<?php get_footer(); */?>

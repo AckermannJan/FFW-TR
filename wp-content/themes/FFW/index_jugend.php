@@ -14,7 +14,8 @@
                 $args = array( 'posts_per_page' => 20, 'order'=> 'DESC', 'category_name' => 'jugend',post_type =>  array( 'post', 'page'));
                 $postslist = get_posts( $args );
                 foreach ( $postslist as $post ) {
-                     setup_postdata( $post ); ?> 
+                     setup_postdata( $post ); 
+                     if(types_render_field("archiv", array("output"=>"raw")) != 1){?>
                         <div class="postBox scan">
                             <div class="postBox-img">
                                 <img src="<?php
@@ -32,7 +33,8 @@
                                 <div class="btn"><a href="<?php echo get_permalink();?>">Weiter lesen</a></div>
                             </div>            
                         </div>        
-                <?php                    
+                <?php   
+                     }
                 }
                 wp_reset_postdata();
             ?>

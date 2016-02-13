@@ -68,7 +68,7 @@
         }
     }
     .einsatzFahrzeuge{
-        background-color:#fff;
+        background-color:#E9EAED;
         color: rgba(102, 97, 97, 1);
         &:after {
             content: "";
@@ -113,7 +113,7 @@
             height: 0px;
             border-left: 8px solid transparent;
             border-right: 8px solid transparent;
-            border-top: 16px solid #fff;
+            border-top: 16px solid #E9EAED;
             left: 40px;
             top: 0px;
             z-index: 999;

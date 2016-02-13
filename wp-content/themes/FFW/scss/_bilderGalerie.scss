@@ -9,20 +9,17 @@ and open the template in the editor.
 */
 
 .imgGalerie{
-        width: 100%;
-        position: relative;
         z-index: 0;
+        position: relative;
+        top:-11px;
         img{
             margin-bottom: -6px;
             border:solid 0px!important;
         }
         #slides{
         text-align: center;
-        width: 100%;
+        width: 990px;
         margin-bottom:-3px;
-            img{
-                width: 100%;
-            }
             .slidesjs-navigation{
                 position: relative;
                 top: -240px;
@@ -33,8 +30,8 @@ and open the template in the editor.
                 display: block;
                 width: 94px;
                 height: 128px;
-                position: relative;
-                margin-top: -139px;
+                top: 20px;
+                position: absolute;
             }
             .slidesjs-next {
                 background: url(imgs/previous.png) repeat scroll 0% 0% transparent;
@@ -42,8 +39,9 @@ and open the template in the editor.
                 float:right;
                 width: 94px;
                 height: 128px;
-                position: relative;
-                margin-top: -130px;
+                top: 20px;
+                right: 0;
+                position: absolute;
                 transform:rotate(180deg);
             }
             .slidesjs-pagination{                
@@ -53,10 +51,10 @@ and open the template in the editor.
                 padding: 0px;
                 margin: 0px auto;
                 width: auto;
-                display: inline-block;
-                position: relative;
-                top: -50px;
-                margin-bottom: -20px;
+                display: block;
+                position: absolute;
+                top: 20px;
+                left: 50%;
                 .slidesjs-pagination-item{
                     float:left;
                     padding:5px;

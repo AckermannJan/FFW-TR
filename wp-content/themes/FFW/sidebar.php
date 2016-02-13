@@ -1,18 +1,70 @@
 
 
-
-<div class="sideBar ">
-    <div class="sideBar-titel">
-        <h3>Wetter</h3>
-    </div>
-    <div class="sideBar-content" style="height: 146px;">
+<?php
+$tageShort = array("SO", "MO", "DI", "MI", "DO", "FRg", "SA");
+$monate = array(1=>"Januar",
+                2=>"Februar",
+                3=>"M&auml;rz",
+                4=>"April",
+                5=>"Mai",
+                6=>"Juni",
+                7=>"Juli",
+                8=>"August",
+                9=>"September",
+                10=>"Oktober",
+                11=>"November",
+                12=>"Dezember");
+?>
+<div class="sideBar" style="position:absolute;top:0px">
+    <div class="sideBar-content" style="height: 176px;background: transparent">
         <div id="weather">
           
         </div>
     </div>
 </div>
+
+<div class="sideBar " >
+    <div class="sideBar-titel sideBar-titel--underline">
+        <h3>Termine</h3>
+    </div>    
+    <div class="sideBar-content" style="background: transparent;">
+        <?php  
+            $args = array( 'posts_per_page' => 3, 'order'=> 'DESC',post_type =>  array( 'termin' ) );
+            $postslist = get_posts( $args );
+            setlocale(LC_TIME,'de_DE');
+            foreach ( $postslist as $post ) {
+                $timestamp = types_render_field("zeitpunkt", array("output"=>"raw"));
+                $month =  date( F, $timestamp  );
+                $monthGerman =  date( n, $timestamp  );
+                $monthGerman = $monate[$monthGerman];
+                $day =  date( d, $timestamp);
+                $daySmall =  date( w, $timestamp  );
+                $daySmall = $tageShort[$daySmall];
+                $year =  date( Y, $timestamp  );
+                $minute =  date( i, $timestamp  );
+                $hour =  date( g, $timestamp  );
+        ?>   
+        <a href="<?php echo get_permalink(); ?>">
+            <div class="datum">   
+                <span><?php echo $daySmall; ?></span>
+                <span><?php echo $day; ?></span>
+            </div>
+            <div class="titel">
+                <span><?php echo get_the_title(); ?></span>
+                <span><?php echo $day .' '. $monthGerman. ' um ' . $hour . ':' . $minute; ?></span>
+            </div>
+            <div class="divider"></div>
+        </a>    
+        <?php
+        
+            }
+            wp_reset_postdata();
+        ?>
+        <div style="font-size: 16px;font-weight:bold;margin-top:15px;"><a href="/termine">Mehr anzeigen...</a></div>
+    </div>
+</div>
 <div class="sideBar " style="height: 100px;">
-    <div class="sideBar-titel">
+    <div class="sideBar-titel sideBar-titel--underline">
         <h3>Letzter Einsatz</h3>
     </div>
     <div class="sideBar-content scan" style="height: 0px;min-height: 50px;position:relative;overflow:hidden;">
@@ -34,15 +86,6 @@
         </div>
     </div>
 </div>
-<div class="sideBar ">
-    <div class="sideBar-titel">
-        <h3>Termine</h3>
-    </div>
-    <div class="sideBar-content" style="height: 147px;">
-        <div>          
-        </div>
-    </div>
-</div>
 <?php 
 $args = array( 'posts_per_page' => 10, 'order'=> 'ASC', 'orderby' => 'title',post_type =>  'SideBar' );
 $postslist = get_posts( $args );
@@ -50,7 +93,7 @@ foreach ( $postslist as $post ) {
         setup_postdata( $post ); 
 ?> 
 <div class="sideBar scan">
-    <div class="sideBar-titel">
+    <div class="sideBar-titel sideBar-titel--underline">
         <h3><?php the_title(); ?></h3>
     </div>
     <div class="sideBar-content">
@@ -64,7 +107,7 @@ foreach ( $postslist as $post ) {
 }
 wp_reset_postdata();
 ?>
-<script src="https://gist.githubusercontent.com/remy/2484402/raw/50eb9541d959c842b7ad4f3d7f7346a2f49ff8cb/gistfile1.js"></script> 
+
 
 <script>
     // Docs at http://simpleweatherjs.com
@@ -78,10 +121,10 @@ $(document).ready(function() {
       var end = weather.sunset.split(" ")[0];
       var diff = Date.parse("Aug 08 2012 " + end + " PM") - Date.parse("Aug 08 2012 " + start + " AM");
 			var diff_time = Math.round(diff/(60*60*1000));
-      html = '<div class="leftWrapper"><div class="temp"><img src="/wp-content/themes/FFW/imgs/temp.png" /><p>'+weather.temp+'&deg;'+weather.units.temp+'</p></div>';
+      html = '<div class="img"><i class="icon-'+weather.code+'"></i></div><div class="leftWrapper"><div class="temp"><img src="/wp-content/themes/FFW/imgs/temp.png" /><p>'+weather.temp+'&deg;'+weather.units.temp+'</p></div>';
       html += '<div class="wind"><img src="/wp-content/themes/FFW/imgs/wind.png" /><p>'+weather.wind.speed+' '+weather.units.speed+'</p></div>';
       html += '<div class="sun"><img src="/wp-content/themes/FFW/imgs/suntime.png" /><p>' + diff_time + ' Std</p></div></div>';
-  		html += '<div class="img"><i class="icon-'+weather.code+'"></i></div>';
+  		html += '';
       $("#weather").html(html);
     },
     error: function(error) {

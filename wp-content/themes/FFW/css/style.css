@@ -443,7 +443,7 @@ a:focus{
   top: 185px; }
   .sideBar-titel {
     height: 50px;
-    width: auto;
+    width: 100%;
     background-color: #1c96e3;
     text-align: center;
     line-height: 50px;
@@ -453,12 +453,6 @@ a:focus{
     font-weight: bold; }
     .sideBar-titel h3 {
       margin: 0px !important; }
-    .sideBar-titel--underline {
-      background-color: transparent;
-      text-align: left;
-      font-weight: normal;
-      border-bottom: solid 2px #1c96e3;
-      line-height: 70px; }
   .sideBar-content {
     background-image: url(imgs/bg.png);
     background-color: #373737;
@@ -534,27 +528,17 @@ a:focus{
     .sideBar-content .icon-10:before {
       content: "W"; }
     .sideBar-content .icon-11:before {
-      content: "I";
-      top: -30px !important;
-      position: relative; }
+      content: "I"; }
     .sideBar-content .icon-12:before {
-      content: "I";
-      top: -30px !important;
-      position: relative; }
+      content: "I"; }
     .sideBar-content .icon-13:before {
-      content: "I";
-      top: -30px !important;
-      position: relative; }
+      content: "I"; }
     .sideBar-content .icon-14:before {
-      content: "I";
-      top: -30px !important;
-      position: relative; }
+      content: "I"; }
     .sideBar-content .icon-15:before {
       content: "W"; }
     .sideBar-content .icon-16:before {
-      content: "I";
-      top: -30px !important;
-      position: relative; }
+      content: "I"; }
     .sideBar-content .icon-17:before {
       content: "W"; }
     .sideBar-content .icon-18:before {
@@ -662,49 +646,32 @@ a:focus{
   border: solid 5px #1c96e3;
   text-align: center;
   padding-top: 10px;
-  background: linear-gradient(to bottom, transparent, transparent 50%, #1c96e3 50%, #1c96e3) repeat;
   position: relative; }
-  .datum span:first-child {
-    margin-top: 0px;
-    font-size: 16px;
-    font-weight: bold;
+  .datum:before {
+    content: '';
     display: block;
-    color: #1c96e3; }
-  .datum span:last-child {
+    height: 3px;
+    background: red; }
+  .datum:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 3px;
+    border-radius: 3px;
+    background: gray;
+    position: absolute;
+    top: 4px;
+    left: 28px; }
+  .datum span {
     margin-top: 11px;
     font-size: 26px;
     font-weight: bold;
-    display: block;
-    color: #fff; }
+    display: block; }
 
-.titel {
-  margin-left: 84px; }
-  .titel span:first-child {
-    font-size: 18px;
-    margin-top: 14px;
-    display: block;
-    height: 50px; }
-  .titel span:nth-child(2) {
-    display: block;
-    margin-top: -15px;
-    height: 100%;
-    overflow: hidden; }
-  .titel span:last-child {
-    font-size: 14px;
-    margin-top: 14px;
-    display: block;
-    margin-bottom: 20px; }
-
-.terminBig {
-  color: #fff;
-  text-decoration: none;
-  position: relative; }
-
-.divider {
-  width: 100%;
-  height: 1px;
-  background: repeating-linear-gradient(to right, transparent, transparent 5px, #1c96e3 5px, #1c96e3 8px) repeat;
-  margin-bottom: 14px; }
+.titel span {
+  font-size: 18px;
+  margin-top: 14px;
+  display: block; }
 
 .SingleHead {
   position: relative;
@@ -820,8 +787,6 @@ a:focus{
       padding-left: 45px;
       padding-right: 45px;
       padding-bottom: 5px; }
-      .singlePost-content .text p {
-        min-height: 20px; }
     .singlePost-content h1, .singlePost-content h2, .singlePost-content h3, .singlePost-content h4, .singlePost-content h5, .singlePost-content h6 {
       color: white; }
     .singlePost-content h1 {
@@ -1241,8 +1206,7 @@ and open the template in the editor.
   margin-top: -20px; }
   .mainFlex-left {
     display: table-cell;
-    position: relative;
-    padding-bottom: 185px; }
+    position: relative; }
   .mainFlex-right {
     display: table-cell;
     width: 990px; }
@@ -1261,7 +1225,8 @@ and open the template in the editor.
 .imgGalerie {
   z-index: 0;
   position: relative;
-  top: -11px; }
+  top: 6px;
+  width: 990px; }
   .imgGalerie img {
     margin-bottom: -6px;
     border: solid 0px !important; }
@@ -1269,6 +1234,8 @@ and open the template in the editor.
     text-align: center;
     width: 990px;
     margin-bottom: -3px; }
+    .imgGalerie #slides img {
+      width: 990px; }
     .imgGalerie #slides .slidesjs-navigation {
       position: relative;
       top: -240px;
@@ -1278,17 +1245,16 @@ and open the template in the editor.
       display: block;
       width: 94px;
       height: 128px;
-      top: 20px;
-      position: absolute; }
+      position: relative;
+      margin-top: -139px; }
     .imgGalerie #slides .slidesjs-next {
       background: url(imgs/previous.png) repeat scroll 0% 0% transparent;
       display: block;
       float: right;
       width: 94px;
       height: 128px;
-      top: 20px;
-      right: 0;
-      position: absolute;
+      position: relative;
+      margin-top: -130px;
       transform: rotate(180deg); }
     .imgGalerie #slides .slidesjs-pagination {
       padding: 0px;
@@ -1297,10 +1263,10 @@ and open the template in the editor.
       padding: 0px;
       margin: 0px auto;
       width: auto;
-      display: block;
-      position: absolute;
-      top: 20px;
-      left: 50%; }
+      display: inline-block;
+      position: relative;
+      top: -50px;
+      margin-bottom: -20px; }
       .imgGalerie #slides .slidesjs-pagination .slidesjs-pagination-item {
         float: left;
         padding: 5px; }
