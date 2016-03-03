@@ -23,11 +23,12 @@ $monate = array(1=>"Januar",
 <html lang="de">    
     <head>
         <meta charset="utf-8" />
-        <title><?php echo "Feuerwehr Mühltal Traisa | ".get_the_title( $pageid )?></title>
+        <title><?php if(!is_home()){ echo get_the_title( $pageid ) . " | ";}  echo "Feuerwehr Mühltal Traisa "; ?></title>
         <?php echo '<meta name="description" content="Feuerwehr Traisa | '.get_the_title( $pageid ).' | '.types_render_field("metadesc", array("output"=>"raw")).'">'; ?>
         <?php echo '<meta name="keywords" content="Feuerwehr, Traisa, '.get_the_title( $pageid ).', '.types_render_field("keywords", array("output"=>"raw")).'"/>'; ?>   
-		<meta http-equiv="content-language" content="<?php language_attributes( $doctype );?>">
-		<link type="text/css" href="/wp-content/themes/FFW/style.css" rel="stylesheet">
+        <meta http-equiv="content-language" content="<?php language_attributes( $doctype );?>">
+        <link type="text/css" href="/wp-content/themes/FFW/style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="/wp-content/themes/FFW/imgs/logo.ico"/>
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
         <script src="/wp-content/themes/FFW/plugins/Slides-SlidesJS-3/source/jquery.slides.js"></script>        
         <script src="/wp-content/themes/FFW/js/TopBarNav.js" type="text/javascript"></script>
